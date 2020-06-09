@@ -24,9 +24,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, 
+q {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+q {
+  font-style: italic;
 }
 
 a {
@@ -102,7 +107,7 @@ blockquote {
     background: orange;
   }
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-    color: #fff;
+    color: rgb(218, 218, 218);
   }
 }
 
@@ -181,6 +186,7 @@ header.masthead .site-heading .result {
 }
 
 #quote {
+  font-size: 26px;
   margin-top: 0;
 }
 
