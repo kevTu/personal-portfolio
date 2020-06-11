@@ -30,9 +30,9 @@ q {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-q {
+/*q {
   font-style: italic;
-}
+}*/
 
 a {
   color: #212529;
@@ -143,12 +143,12 @@ blockquote {
 /* Start of banner */
 
 header.masthead {
-  margin-bottom: 50px;
   background: no-repeat center center;
   background-color: #868e96;
   background-attachment: scroll;
   position: relative;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 header.masthead .overlay {
@@ -186,7 +186,7 @@ header.masthead .site-heading .result {
 }
 
 #quote {
-  font-size: 26px;
+  font-size: 36px;
   margin-top: 0;
 }
 
@@ -231,3 +231,16 @@ header.masthead .site-heading .result {
 }
 
 /* End of banner*/
+
+/* Start of About Section */
+#first {
+  padding: 100px 0px;
+}
+
+@media only screen and (max-width: 992px) {
+  #picText {
+    padding: 15px;
+  }
+}
+
+/* End of About Section */
