@@ -48,6 +48,10 @@ blockquote {
   color: #868e96;
 }
 
+.about-title, .skills-title, .projects-title {
+  padding: 0px 0px 50px;
+}
+
 /* Start of main navigation */
 
 #mainNav {
@@ -237,20 +241,6 @@ header.masthead .site-heading .result {
   padding: 100px 0px;
 }
 
-.about-title, .skills-title {
-  padding: 0px 0px 50px;
-}
-
-/*#first .about-text {
-  align-self: start;
-}*/
-
-/*@media only screen and (max-width: 992px) {
-  .about-text {
-    padding: 15px;
-  }
-}*/
-
 /* End of About Section */
 
 /* Start of Skills Section */
@@ -265,8 +255,25 @@ header.masthead .site-heading .result {
   font-size: 80px;
 }
 
-#second .my-skills {
+#second .skills-list ul {
+  display: inline-block;
   text-align: left;
 }
 
-/* End of Skill */
+/* End of Skills Section */
+
+/* Start of Projects Section */
+
+#third {
+  padding: 100px 0px;
+}
+
+/*#third .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.7;
+}*/
+
+/* End of Projects Section */
