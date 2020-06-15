@@ -4,6 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 
+/* Start of global vars */
+
 body {
   font-size: 20px;
   color: #212529;
@@ -30,10 +32,6 @@ q {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/*q {
-  font-style: italic;
-}*/
-
 a {
   color: #212529;
   transition: all 0.2s;
@@ -48,9 +46,31 @@ blockquote {
   color: #868e96;
 }
 
+.banner, #third {
+  background-image: url('../images/foggy-forest.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #86968d;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #141618;
+  opacity: 0.7;
+}
+
 .about-title, .skills-title, .projects-title {
   padding: 0px 0px 50px;
 }
+
+/* End of global vars */
 
 /* Start of main navigation */
 
@@ -146,41 +166,19 @@ blockquote {
 
 /* Start of banner */
 
-header.masthead {
-  background: no-repeat center center;
-  background-color: #868e96;
-  background-attachment: scroll;
-  position: relative;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-header.masthead .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #212529;
-  opacity: 0.7;
-}
-
-header.masthead .site-heading {
-  padding: 200px 0 150px;
-  color: white;
-}
-
-@media only screen and (min-width: 768px) {
-  header.masthead .site-heading {
-    padding: 200px 0;
-  }
-}
-
-header.masthead .site-heading {
+.banner .site-heading {
   text-align: center;
+  padding: 200px 0 200px;
+  color: white;
+  /*position: relative;*/
 }
 
-header.masthead .site-heading .result {
+.banner .site-heading .quote-overlay {
+  position: relative;
+  padding: 50px;
+}
+
+.banner .site-heading .result {
   opacity: 0;
   -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 2s forwards; /* Firefox < 16 */
@@ -193,7 +191,6 @@ header.masthead .site-heading .result {
   font-size: 36px;
   margin-top: 0;
 }
-
 
 #author {
   font-size: 20px;
@@ -237,6 +234,7 @@ header.masthead .site-heading .result {
 /* End of banner*/
 
 /* Start of About Section */
+
 #first {
   padding: 100px 0px;
 }
@@ -244,6 +242,7 @@ header.masthead .site-heading .result {
 /* End of About Section */
 
 /* Start of Skills Section */
+
 #second {
   background-color: #e0e0e0;
   padding: 100px 0px;
@@ -266,14 +265,7 @@ header.masthead .site-heading .result {
 
 #third {
   padding: 100px 0px;
+  color: white;
 }
-
-/*#third .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #212529;
-  opacity: 0.7;
-}*/
 
 /* End of Projects Section */

@@ -2,7 +2,7 @@
 
 const URL = "js/quotes.json";
 
-async function render() {
+async function render() { //Note: Buggy -> fetch doesn't always work with local files. Needs fix.
     let tmp = await fetch(URL);
     let result = await tmp.json();
     let rand = Math.floor(Math.random() * result.length);
