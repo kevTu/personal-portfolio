@@ -187,17 +187,22 @@ blockquote {
           animation: fadein 2s forwards;
 }
 
-#quote {
-  font-size: 36px;
+.banner .site-heading .quote-overlay hr {
+  border: 1px solid white;
+  width: 50%;
+}
+
+#full-name {
+  font-size: 50px;
+  font-weight: 600;
   margin-top: 0;
 }
 
-#author {
+#roles {
   font-size: 20px;
   font-weight: 300;
-  line-height: 1.1;
   display: block;
-  margin: 10px 0 0;
+  margin: 5px 0 0;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   animation-delay: 1s;
 }
