@@ -166,7 +166,7 @@ q {
   color: white;
 }
 
-.banner .site-heading .quote-overlay {
+.banner .site-heading .intro-overlay {
   position: relative;
   padding: 50px;
 }
@@ -180,7 +180,7 @@ q {
           animation: fadein 2s forwards;
 }
 
-.banner .site-heading .quote-overlay hr {
+.banner .site-heading .intro-overlay hr {
   border: 1px solid grey;
   opacity: 0.3;
   width: 50%;
