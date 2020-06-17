@@ -54,9 +54,9 @@ q {
 }
 
 .banner, #third {
-  background-image: url('../images/foggy-forest.jpg');
+  background-image: url('../images/snowy-mountains.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-color: #86968d;
   position: relative;
   background-size: cover;
@@ -92,6 +92,11 @@ q {
   font-size: 30px;
   font-weight: 800;
   color: white;
+}
+
+#mainNav .navbar-brand:hover {
+  color: grey;
+  transition: 0.25s;
 }
 
 #mainNav .navbar-nav > li.nav-item > a {
