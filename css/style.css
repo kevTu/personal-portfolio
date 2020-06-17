@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Clean Blog v5.0.8 (https://startbootstrap.com/template-overviews/clean-blog)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
- */
-
 /* Start of global vars */
 
 body {
@@ -38,6 +32,27 @@ q {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 3px solid rgb(85, 81, 81);
+  border-radius: 50px;
+}
+
+.divider::before {
+  margin-right: 20px;
+}
+
+.divider::after {
+  margin-left: 20px;
+}
+
 .banner, #third {
   background-image: url('../images/foggy-forest.jpg');
   background-repeat: no-repeat;
@@ -58,7 +73,7 @@ q {
 }
 
 .about-title, .skills-title, .projects-title {
-  padding: 0px 0px 50px;
+  padding: 0px 0px 100px;
 }
 
 /* End of global vars */
@@ -265,6 +280,10 @@ q {
 #third {
   padding: 100px 0px;
   color: white;
+}
+
+#third .projects-title .divider::before, #third .projects-title .divider::after{
+  border-color: white;
 }
 
 /* End of Projects Section */
