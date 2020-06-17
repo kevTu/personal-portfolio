@@ -41,11 +41,6 @@ a:focus, a:hover {
   color: #0085A1;
 }
 
-blockquote {
-  font-style: italic;
-  color: #868e96;
-}
-
 .banner, #third {
   background-image: url('../images/foggy-forest.jpg');
   background-repeat: no-repeat;
@@ -62,8 +57,7 @@ blockquote {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #141618;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .about-title, .skills-title, .projects-title {
@@ -76,7 +70,6 @@ blockquote {
 
 #mainNav {
   position: absolute;
-  border-bottom: 1px solid #e9ecef;
   background-color: white;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -110,10 +103,12 @@ blockquote {
 }
 
 @media only screen and (max-width: 992px) {
+
   #mainNav .navbar-nav > li.nav-item > a:focus {
     border-radius: 50px;
     background: orange;
   }
+  
 }
 
 @media only screen and (min-width: 992px) {
@@ -121,45 +116,29 @@ blockquote {
     border-bottom: 1px solid transparent;
     background: transparent;
   }
+
+  #mainNav.scrolling {
+    position: fixed;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
   #mainNav .navbar-nav > li.nav-item > a {
     padding: 10px 20px;
     color: #fff;
     border-radius: 50px;
-    transition: .25s;
+    
   }
+
   #mainNav .navbar-nav > li.nav-item > a:hover {
     background: orange;
+    transition: .25s;
   }
+
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: white;
   }
-}
 
-@media only screen and (min-width: 992px) {
-  #mainNav {
-    transition: background-color 0.2s;
-    /* Force Hardware Acceleration in WebKit */
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-  }
-  #mainNav.is-fixed {
-    /* when the user scrolls down, we hide the header right above the viewport */
-    position: fixed;
-    top: -67px;
-    transition: transform 0.2s;
-    border-bottom: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  #mainNav.is-fixed .navbar-nav > li.nav-item > a {
-    color: #212529;
-  }
-  #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0085A1;
-  }
-  #mainNav.is-visible {
-    /* if the user changes the scrolling direction, we show the header */
-    transform: translate3d(0, 100%, 0);
-  }
 }
 
 /* End of main navigation */
