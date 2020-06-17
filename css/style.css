@@ -1,10 +1,7 @@
-/*!
- * Start Bootstrap - Clean Blog v5.0.8 (https://startbootstrap.com/template-overviews/clean-blog)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
- */
+/* Start of global vars */
 
 body {
+  position: relative;
   font-size: 20px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
@@ -15,8 +12,13 @@ p {
   margin: 30px 0;
 }
 
-p a {
-  text-decoration: underline;
+a {
+  color: #212529;
+  transition: all 0.2s;
+}
+
+a:focus, a:hover {
+  color: #0085A1;
 }
 
 h1,
@@ -30,30 +32,55 @@ q {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/*q {
-  font-style: italic;
-}*/
-
-a {
-  color: #212529;
-  transition: all 0.2s;
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-a:focus, a:hover {
-  color: #0085A1;
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 3px solid rgb(85, 81, 81);
+  border-radius: 50px;
 }
 
-blockquote {
-  font-style: italic;
-  color: #868e96;
+.divider::before {
+  margin-right: 20px;
 }
+
+.divider::after {
+  margin-left: 20px;
+}
+
+.banner, #third {
+  background-image: url('../images/foggy-forest.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #86968d;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about-title, .skills-title, .projects-title {
+  padding: 0px 0px 100px;
+}
+
+/* End of global vars */
 
 /* Start of main navigation */
 
 #mainNav {
-  position: absolute;
-  border-bottom: 1px solid #e9ecef;
-  background-color: white;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -61,21 +88,10 @@ blockquote {
   padding: 10px 5px;
 }
 
-#mainNav .navbar-collapse {
-  text-align: center;
-}
-
 #mainNav .navbar-brand {
+  font-size: 30px;
   font-weight: 800;
-  color: #343a40;
-}
-
-#mainNav .navbar-toggler {
-  font-size: 12px;
-  font-weight: 800;
-  padding: 13px;
-  text-transform: uppercase;
-  color: #343a40;
+  color: white;
 }
 
 #mainNav .navbar-nav > li.nav-item > a {
@@ -86,97 +102,91 @@ blockquote {
 }
 
 @media only screen and (max-width: 992px) {
-  #mainNav .navbar-nav > li.nav-item > a:focus {
-    border-radius: 50px;
-    background: orange;
+
+  #mainNav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
   }
+
+  #mainNav .navbar-toggler {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    border-color: white;
+    color: white;
+  }
+
+  #mainNav .navbar-collapse {
+    text-align: center;
+  }
+
+  #mainNav .navbar-collapse .nav-link {
+    color: white;
+  }
+
+  #mainNav .navbar-collapse .nav-link.active {
+    color: grey;
+    transition: .25s;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
   #mainNav {
+    position: absolute;
     border-bottom: 1px solid transparent;
     background: transparent;
   }
+
+  #mainNav.scrolling {
+    position: fixed;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
   #mainNav .navbar-nav > li.nav-item > a {
     padding: 10px 20px;
     color: #fff;
     border-radius: 50px;
+  }
+
+  #mainNav .navbar-nav > li.nav-item > a:hover {
+    color: grey;
+  }
+
+  #mainNav .navbar-nav > li.nav-item > a:focus {
+    color: white;
+    transition: 0.25s;
+  }
+
+  #mainNav .navbar-nav > li.nav-item > a.active {
+    background: orange;
     transition: .25s;
   }
-  #mainNav .navbar-nav > li.nav-item > a:hover {
-    background: orange;
-  }
-  #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-    color: rgb(218, 218, 218);
-  }
-}
 
-@media only screen and (min-width: 992px) {
-  #mainNav {
-    transition: background-color 0.2s;
-    /* Force Hardware Acceleration in WebKit */
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
+  #mainNav .navbar-nav > li.nav-item > a.active:hover {
+    color: white;
   }
-  #mainNav.is-fixed {
-    /* when the user scrolls down, we hide the header right above the viewport */
-    position: fixed;
-    top: -67px;
-    transition: transform 0.2s;
-    border-bottom: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  #mainNav.is-fixed .navbar-nav > li.nav-item > a {
-    color: #212529;
-  }
-  #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0085A1;
-  }
-  #mainNav.is-visible {
-    /* if the user changes the scrolling direction, we show the header */
-    transform: translate3d(0, 100%, 0);
-  }
+
 }
 
 /* End of main navigation */
 
 /* Start of banner */
 
-header.masthead {
-  background: no-repeat center center;
-  background-color: #868e96;
-  background-attachment: scroll;
-  position: relative;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-header.masthead .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #212529;
-  opacity: 0.7;
-}
-
-header.masthead .site-heading {
-  padding: 200px 0 150px;
+.banner .site-heading {
+  text-align: center;
+  padding: 200px 0 200px;
   color: white;
 }
 
-@media only screen and (min-width: 768px) {
-  header.masthead .site-heading {
-    padding: 200px 0;
-  }
+.banner .site-heading .intro-overlay {
+  position: relative;
+  padding: 50px;
 }
 
-header.masthead .site-heading {
-  text-align: center;
-}
-
-header.masthead .site-heading .result {
+.banner .site-heading .result {
   opacity: 0;
   -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 2s forwards; /* Firefox < 16 */
@@ -185,18 +195,23 @@ header.masthead .site-heading .result {
           animation: fadein 2s forwards;
 }
 
-#quote {
-  font-size: 36px;
+.banner .site-heading .intro-overlay hr {
+  border: 1px solid grey;
+  opacity: 0.3;
+  width: 50%;
+}
+
+#full-name {
+  font-size: 50px;
+  font-weight: 600;
   margin-top: 0;
 }
 
-
-#author {
+#roles {
   font-size: 20px;
   font-weight: 300;
-  line-height: 1.1;
   display: block;
-  margin: 10px 0 0;
+  margin: 5px 0 0;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   animation-delay: 1s;
 }
@@ -233,14 +248,42 @@ header.masthead .site-heading .result {
 /* End of banner*/
 
 /* Start of About Section */
+
 #first {
   padding: 100px 0px;
 }
 
-@media only screen and (max-width: 992px) {
-  #picText {
-    padding: 15px;
-  }
+/* End of About Section */
+
+/* Start of Skills Section */
+
+#second {
+  background-color: #e0e0e0;
+  padding: 100px 0px;
 }
 
-/* End of About Section */
+#second .icons {
+  display: block;
+  color: rgb(102, 102, 102);
+  font-size: 80px;
+}
+
+#second .skills-list ul {
+  display: inline-block;
+  text-align: left;
+}
+
+/* End of Skills Section */
+
+/* Start of Projects Section */
+
+#third {
+  padding: 100px 0px;
+  color: white;
+}
+
+#third .projects-title .divider::before, #third .projects-title .divider::after{
+  border-color: white;
+}
+
+/* End of Projects Section */
