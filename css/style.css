@@ -291,4 +291,8 @@ q {
   border-color: white;
 }
 
+#third .card {
+  border-color: rgba(0, 0, 0, 0);
+}
+
 /* End of Projects Section */
