@@ -46,11 +46,11 @@ q {
 }
 
 .divider::before {
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .divider::after {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .banner, #third {
@@ -69,7 +69,7 @@ q {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .about-title, .skills-title, .projects-title {
@@ -138,6 +138,7 @@ q {
 }
 
 @media only screen and (min-width: 992px) {
+
   #mainNav {
     position: absolute;
     border-bottom: 1px solid transparent;
@@ -291,8 +292,39 @@ q {
   border-color: white;
 }
 
-#third .card {
-  border-color: rgba(0, 0, 0, 0);
+#third .card-body {
+  color: black;
+}
+
+#third .card-body .btn-outline-primary:hover {
+  background-color: rgba(0, 123, 255, 0.3);
+  color: rgb(0, 123, 255);
+}
+
+#third .card-body .btn-outline-primary:focus {
+  color: rgb(0, 123, 255);
+}
+
+#third .card-body .btn-outline-primary:active {
+  color: rgb(0, 123, 255);
+}
+
+#third .project-cols {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+
+  #third .projects-title .divider::before, #third .projects-title .divider::after{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #third .project-cols {
+    padding-bottom: 30px;
+  }
+
 }
 
 /* End of Projects Section */
