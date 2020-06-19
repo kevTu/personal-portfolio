@@ -292,8 +292,21 @@ q {
   border-color: white;
 }
 
+#third .card {
+  height: 100%;
+}
+
 #third .card-body {
   color: black;
+}
+
+#third .card-body .card-text {
+  font-size: 16px;
+}
+
+#third .card-body .btn-outline-primary {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #third .card-body .btn-outline-primary:hover {
@@ -310,8 +323,9 @@ q {
 }
 
 #third .project-cols {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -319,10 +333,6 @@ q {
   #third .projects-title .divider::before, #third .projects-title .divider::after{
     margin-left: 5px;
     margin-right: 5px;
-  }
-
-  #third .project-cols {
-    padding-bottom: 30px;
   }
 
 }
