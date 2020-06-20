@@ -14,5 +14,5 @@ $("#mainNav a").on('click', function (event) {
 
 // Slide down navigation bar on scroll.
 $(window).scroll(function () {
-    $("#mainNav").toggleClass("scrolling", $(this).scrollTop() > $("#mainNav").height());
+    $("#mainNav").toggleClass("scrolling", $(this).scrollTop() > $("#mainNav").height() + 200);
 });
