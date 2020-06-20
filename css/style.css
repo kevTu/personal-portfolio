@@ -356,16 +356,26 @@ h2:after {
 #third .card-body p {
   margin-top: 0;
   margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
   font-size: 16px;
 }
 
 #third .btn-outline-warning {
   font-size: 20px;
   font-weight: 600;
-  width: 100%;
   margin-top: 50px;
-  padding: 15px;
+  padding: 15px 30px 15px;
   border-radius: 50px;
+}
+
+#third .btn-outline-warning:hover {
+  background-color: rgba(255, 193, 7, 0.3);
+  color: rgb(255, 193, 7);
+}
+
+#third .btn-outline-warning:focus {
+  color: rgb(255, 193, 7);
 }
 
 /*@media only screen and (max-width: 992px) {
