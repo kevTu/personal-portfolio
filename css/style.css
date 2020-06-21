@@ -286,6 +286,11 @@ h2:after {
   padding: 100px 0px;
 }
 
+#first #myPic {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 @media only screen and (min-width: 992px) {
 
   #first .col-lg-6 p {
