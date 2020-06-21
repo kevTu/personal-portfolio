@@ -99,7 +99,7 @@ h2:after {
   margin-right: -50%;
 }
 
-.about-title, .skills-title, .projects-title {
+.about-title, .skills-title, .projects-title, .contact-title {
   padding: 0px 0px 100px;
 }
 
@@ -286,6 +286,14 @@ h2:after {
   padding: 100px 0px;
 }
 
+@media only screen and (min-width: 992px) {
+
+  #first .col-lg-6 p {
+    margin-top: 0;
+  }
+
+}
+
 /* End of About Section */
 
 /* Start of Skills Section */
@@ -332,6 +340,8 @@ h2:after {
 #third .card-body .btn-outline-primary {
   margin-left: 10px;
   margin-right: 10px;
+  padding: 8px;
+  text-transform: uppercase;
 }
 
 #third .card-body .btn-outline-primary:hover {
@@ -362,11 +372,14 @@ h2:after {
 }
 
 #third .btn-outline-warning {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   margin-top: 50px;
   padding: 15px 30px 15px;
+  border: 2px solid;
   border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: none;
 }
 
 #third .btn-outline-warning:hover {
@@ -378,13 +391,80 @@ h2:after {
   color: rgb(255, 193, 7);
 }
 
-/*@media only screen and (max-width: 992px) {
-
-  #third .projects-title .divider::before, #third .projects-title .divider::after{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-}*/
-
 /* End of Projects Section */
+
+/* Start of Contact Section */
+
+#fourth {
+  padding: 100px 0px;
+}
+
+#fourth input, #fourth textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: #f7f7f7;
+  border-radius: 0.35em;
+  border: solid 2px transparent;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 10px 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+#fourth .contact-group {
+  padding-bottom: 25px;
+}
+
+#fourth .btn-outline-primary {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d1d1d50;
+  padding: 15px 30px 15px;
+  border: 2px solid;
+  border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+#fourth .btn-outline-primary:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #00ff55de;
+}
+
+#fourth .labeled-icons {
+  list-style: none;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.7);
+  margin-right: 40px;
+}
+
+#fourth .labeled-icons > li { 
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#fourth .labeled-icons > li > a {
+  color: white;
+}
+
+#fourth .labeled-icons i {
+  padding-right: 5px;
+}
+
+#fourth .labeled-icons i > .label {
+  display: none;
+}
+
+/* End of Contact Section */
+
+/* Start of Footer */
+
+#end {
+  background-color: #e0e0e0;
+}
+
+/* End of Footer */
