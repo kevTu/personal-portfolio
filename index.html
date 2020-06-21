@@ -36,7 +36,7 @@
               <a class="nav-link" href="#third">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#fourth">Contact</a>
             </li>
           </ul>
         </div>
@@ -227,39 +227,84 @@
         </div>
       </div>
     </section>
-  
+    
+    <!-- Contact -->
+    <section id="fourth">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <h2 class="contact-title">Contact Me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-7 col-md-12 mr-auto">
+            <form name="my-contact" method="POST" action="#" data-netlify="true">
+              <div class="row">
+                <div class="contact-group col-lg-6">
+                  <input type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="contact-group col-lg-6">
+                  <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="contact-group col-lg-12">
+                  <textarea name="message" id="message" placeholder="Enter Your Message" rows="4"></textarea>
+                </div>
+                <div class="contact-group col-lg-12">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="contact-group col-lg-3">
+                  <a role="button" class="btn btn-outline-primary btn-lg">Submit</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="contact-group col-lg-4 col-sm-12">
+            <ul class="labeled-icons">
+              <li>
+                <i class="fas fa-phone-alt">
+                  <span class="label">Phone</span>
+                </i>
+                413-271-4336
+              </li>
+              <li>
+                <i class="fas fa-envelope">
+                  <span class="label">Email</span>
+                </i>
+                <a href="#">kgtu154@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer>
+    <footer id="end">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
+            <p class="copyright text-muted text-center">Copyright &copy; Kevin Tu 2020</p>
             <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
+              <li class="social-media list-inline-item">
+                <a href="https://www.linkedin.com/in/kevin-tu-0360021aa/" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
+              <li class="social-media list-inline-item">
+                <a href="https://github.com/kevTu" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
+              
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
           </div>
         </div>
       </div>
